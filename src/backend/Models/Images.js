@@ -9,8 +9,8 @@ var AWS = require('aws-sdk');
 
 AWS.config.update({
     region: 'us-west-2',
-    accessKeyId: 'AKIAT4TCDNU4LMOBOPOA',
-    secretAccessKey: '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',
+    accessKeyId: keyId,
+    secretAccessKey: accessKey,
     endpoint: 'http://localhost:8000'
 })
 
