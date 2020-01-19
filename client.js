@@ -20,7 +20,7 @@ const form = document.getElementById('payment-form');
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  const {token, error} = await stripe.createToken(card);
+  const {source, error} = await stripe.createToken(card);
   console.log(token);
 
   if (error) {
