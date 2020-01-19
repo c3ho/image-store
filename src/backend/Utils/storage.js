@@ -9,6 +9,17 @@ module.exports = {
         return query;
     },
 
+    // Return an image by similar
+    searchImageByTitle: async (title) => {
+        if (!title) {
+            return 'hi'
+        }
+        titleFixed = `/${title}/i`
+        console.log('hi');
+        const query = Image.find({ title: titleFixed })
+        return query;
+    },
+
     // Adds an image, will check for duplicate names
     addImage: async (image) => {
         const dupTitle = await module.exports.findImageByTitle(image.title);

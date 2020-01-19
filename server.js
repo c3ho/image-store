@@ -40,8 +40,14 @@ app.get('/images', async (req, res) => {
 
 // Verified, works
 app.get('/images/:title', async (req, res) => {
-    const result = await storage.findImageByTitle(req.params.title)
+    const result = await storage.findImageByTitle(req.params.title);
     res.json(result);
+})
+
+app.get('/images/search', async (req, res) => {
+    console.log(req.query.title);
+    const result = await storage.searchImageByTitle(req.query.title);
+    res.json("hi");
 })
 
 // No tags will send empty
