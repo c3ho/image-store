@@ -59,4 +59,9 @@ module.exports = {
     getShoppingCart: () => {
         return shoppingCart;
     },
+
+    // Returns all orders
+    getAllOrders: () => {
+        return orders;
+    },
 }

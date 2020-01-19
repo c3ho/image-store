@@ -80,6 +80,7 @@ app.put('/images/update/:title', async (req, res) => {
         storage.updateImageInventory(req.body.title, req.body.inventory);
         res.send(`Successfully updated inventory amount for image ${req.params.title} to ${req.body.inventory}`);
     }
+
 })
 
 // Remove Image
@@ -93,9 +94,8 @@ app.delete('/images/delete/:title', async (req, res) => {
 })
 
 // Get all orders
-app.get('/order', async(req, res) => {
-    if (Object.keys(req.body).length === 0) {
-    }
+app.get('/orders', async(req, res) => {
+    res.json(payment.getAllOrders());
 });
 
 // Verified Works
@@ -111,7 +111,7 @@ app.post('/shopping-cart', (req, res) => {
 
 // Verified Works
 app.get('/shopping-cart/checkout', (req, res) => {
-    res.json(payment.createOrder());
+    res.json(payment.createOrder(req.query.discount));
 })
 
 // Verified Works
