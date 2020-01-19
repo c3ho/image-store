@@ -1,3 +1,8 @@
-Attempt for the backend challenge at Shopify
+Attempt for the 2020 backend challenge at Shopify
 
-The app uses DynamoDB, Express, NodeJS
+The app uses MongoDB, Express, NodeJS
+
+feel free to use the following routes:
+
+GET ROUTES
+'/images'
